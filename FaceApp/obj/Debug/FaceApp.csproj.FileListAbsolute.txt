@@ -1,0 +1,13 @@
+C:\Users\Student\source\repos\AzureWeb\FaceApp\bin\Debug\FaceApp.exe.config
+C:\Users\Student\source\repos\AzureWeb\FaceApp\bin\Debug\FaceApp.exe
+C:\Users\Student\source\repos\AzureWeb\FaceApp\bin\Debug\FaceApp.pdb
+C:\Users\Student\source\repos\AzureWeb\FaceApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Student\source\repos\AzureWeb\FaceApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Student\source\repos\AzureWeb\FaceApp\obj\Debug\FaceApp.csprojAssemblyReference.cache
+C:\Users\Student\source\repos\AzureWeb\FaceApp\obj\Debug\FaceApp.Form1.resources
+C:\Users\Student\source\repos\AzureWeb\FaceApp\obj\Debug\FaceApp.Properties.Resources.resources
+C:\Users\Student\source\repos\AzureWeb\FaceApp\obj\Debug\FaceApp.csproj.GenerateResource.cache
+C:\Users\Student\source\repos\AzureWeb\FaceApp\obj\Debug\FaceApp.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\AzureWeb\FaceApp\obj\Debug\FaceApp.csproj.CopyComplete
+C:\Users\Student\source\repos\AzureWeb\FaceApp\obj\Debug\FaceApp.exe
+C:\Users\Student\source\repos\AzureWeb\FaceApp\obj\Debug\FaceApp.pdb
