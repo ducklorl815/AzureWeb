@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewData["Title"] = "ImageDetect";
+}
+
+<h1>ImageDetect</h1>
+
+<label><span>請輸入網址:</span></label>
+<input class="form-control" id="imageUrl" value="https://a-z-animals.com/media/2021/12/How-Long-Do-Lions-Live-header.jpg" />
+
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img id="image" class="img-thumbnail w-100" src="https://a-z-animals.com/media/2021/12/How-Long-Do-Lions-Live-header.jpg" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<button class="btn-outline-primary" onclick="faceDetect()">Detect</button>
+<div class="form-group">
+    <img class="img-thumbnail" id="image" src="https://static.theprint.in/wp-content/uploads/2021/04/yawning-lion.jpg?compress=true&quality=80&w=376&dpr=2.6" />
+</div>
+
+@section Scripts
+{
+    <script>
+        function faceDetect() {
+            $("#face").attr("src", $("#faceUrl").val());
+
+        var params = {
+            // Request parameters
+            "visualFeatures":"Description",
+            //queryString["details"] = "{string}";
+            "language": "en",
+            "model-version":"latest",
+        };
+
+        var data = {
+            url: $("#imageUrl").val()
+        };
+
+
+        $.ajax({
+            url: "https://msit14306p2.cognitiveservices.azure.com/vision/v3.2/analyze?" + $.param(params),
+            beforeSend: function (xhrObj) {
+                // Request headers
+                xhrObj.setRequestHeader("Content-Type", "application/json");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "b2cfc22bd8b24b8cb15a8c5906c5ed96");
+            },
+            type: "POST",
+            // Request body
+            data: JSON.stringify(data),
+        })
+            .done(function (data) {
+                //    alert(JSON.stringify(data));
+                var text = data["description"]["captions"][0]["text"];
+                var confidence = data["description"]["captions"][0]["confidence"];
+                alert(`內容:${text}, 信心指數: ${(confidence * 100).toFixed(2)} %`);
+                }).fail(function (err) {
+                    alert(err.responseText);
+                });
+        }
+
+    </script>
+}

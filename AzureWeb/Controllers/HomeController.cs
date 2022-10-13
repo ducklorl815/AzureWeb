@@ -26,7 +26,10 @@ namespace AzureWeb.Controllers
         {
             return View();
         }
-
+        public IActionResult ImageDetect()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
