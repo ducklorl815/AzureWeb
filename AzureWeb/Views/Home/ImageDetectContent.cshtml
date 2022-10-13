@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewData["Title"] = "ImageDetect";
+}
+
+<h1>ImageDetect</h1>
+
+<label><span>請選取圖形檔案</span></label>
+<input class="form-control" id="imageFile" type="file" />
+
+@*<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img id="image" class="img-thumbnail w-100" src=$imageUrl alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+
+<button class="btn-outline-primary" onclick="imageDetect()">Detect</button>
+<div class="form-group">
+    <img class="img-thumbnail" id="image" src="" />
+</div>
+
+@section Scripts
+{
+    <script>
+        var imageBuffer;
+        document.querySelector("#imageFile").addEventListener("change", function () {
+            var reader = new FileReader();
+            reader.onload = function () {
+                imageBuffer = this.result;
+                var blob = new Blob([imageBuffer], { type: "image/jpg" });
+                var urlCreator = window.URL || window.webkitURL;
+                var imageUrl = urlCreator.createObjectURL(blob);
+                $("#image").attr("src", imageUrl);
+            };
+            reader.readAsArrayBuffer(this.files[0]);
+        })
+
+        function imageDetect() {
+            //====================
+            $("#image").attr("src", $("#imageUrl").val());
+            //====================
+        var params = {
+            // Request parameters
+            "visualFeatures":"Description",
+            //queryString["details"] = "{string}";
+            "language": "en",
+            "model-version":"latest",
+        };
+
+        $.ajax({
+            url: "https://msit14306p2.cognitiveservices.azure.com/vision/v3.2/analyze?" + $.param(params),
+            beforeSend: function (xhrObj) {
+                // Request headers
+                xhrObj.setRequestHeader("Content-Type", "application/octet-stream");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "b2cfc22bd8b24b8cb15a8c5906c5ed96");
+            },
+            type: "POST",
+            processData:false,
+            // Request body
+            data: imageBuffer,
+        })
+            .done(function (data) {
+                //    alert(JSON.stringify(data));
+                var text = data["description"]["captions"][0]["text"];
+                var confidence = data["description"]["captions"][0]["confidence"];
+                alert(`內容:${text}, 信心指數: ${(confidence * 100).toFixed(2)} %`);
+                }).fail(function (err) {
+                    alert(err.responseText);
+                });
+        }
+
+    </script>
+}

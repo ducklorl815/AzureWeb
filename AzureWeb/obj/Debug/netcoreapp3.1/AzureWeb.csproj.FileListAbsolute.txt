@@ -329,3 +329,4 @@ C:\Users\Student\Documents\AzureWeb\AzureWeb\obj\Debug\netcoreapp3.1\AzureWeb.dl
 C:\Users\Student\Documents\AzureWeb\AzureWeb\obj\Debug\netcoreapp3.1\AzureWeb.pdb
 C:\Users\Student\Documents\AzureWeb\AzureWeb\obj\Debug\netcoreapp3.1\AzureWeb.genruntimeconfig.cache
 C:\Users\Student\Documents\AzureWeb\AzureWeb\obj\Debug\netcoreapp3.1\Razor\Views\Home\ImageDetect.cshtml.g.cs
+C:\Users\Student\Documents\AzureWeb\AzureWeb\obj\Debug\netcoreapp3.1\Razor\Views\Home\ImageDetectContent.cshtml.g.cs

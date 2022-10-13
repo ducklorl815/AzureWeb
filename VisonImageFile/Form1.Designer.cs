@@ -46,10 +46,10 @@ namespace VisonImageFile
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // txtUrl
+            // txtFileName
             // 
             this.txtFileName.Location = new System.Drawing.Point(49, 14);
-            this.txtFileName.Name = "txtUrl";
+            this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(695, 22);
             this.txtFileName.TabIndex = 4;
             // 
@@ -76,7 +76,6 @@ namespace VisonImageFile
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "圖檔格式(.jpg)|.jpg|(.jpeg)|.jpeg|(.png)|.png|(.gif)|.gif|(.tif)|.tif";
             // 
             // Form1
             // 

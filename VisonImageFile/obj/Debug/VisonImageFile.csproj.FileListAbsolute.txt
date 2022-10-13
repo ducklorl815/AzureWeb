@@ -1,0 +1,16 @@
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\bin\Debug\VisonImageFile.exe.config
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\bin\Debug\VisonImageFile.exe
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\bin\Debug\VisonImageFile.pdb
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\bin\Debug\VisionApp.exe
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\bin\Debug\VisionApp.pdb
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\bin\Debug\VisionApp.exe.config
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\obj\Debug\VisonImageFile.csprojAssemblyReference.cache
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\obj\Debug\VisonImageFile.Form1.resources
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\obj\Debug\VisonImageFile.Properties.Resources.resources
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\obj\Debug\VisonImageFile.csproj.GenerateResource.cache
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\obj\Debug\VisonImageFile.csproj.CoreCompileInputs.cache
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\obj\Debug\VisonImageFile.csproj.CopyComplete
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\obj\Debug\VisonImageFile.exe
+C:\Users\Student\Documents\AzureWeb\VisonImageFile\obj\Debug\VisonImageFile.pdb
